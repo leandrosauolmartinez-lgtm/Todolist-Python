@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-"""Lista de tareas con interfaz gráfica (Tkinter). Guarda en tareas.json."""
+
 import json
 import tkinter as tk
 from datetime import datetime
@@ -38,7 +37,7 @@ class TodoApp(tk.Tk):
         marco = ttk.Frame(self, padding=12)
         marco.pack(fill="both", expand=True)
 
-        ttk.Label(marco, text="📝 Mis tareas", font=("Segoe UI", 16, "bold")).pack(anchor="w")
+        ttk.Label(marco, text=" Mis tareas", font=("Segoe UI", 16, "bold")).pack(anchor="w")
 
         fila = ttk.Frame(marco)
         fila.pack(fill="x", pady=(10, 6))
@@ -67,7 +66,7 @@ class TodoApp(tk.Tk):
 
         botones = ttk.Frame(marco)
         botones.pack(fill="x", pady=8)
-        for texto, cmd in (("✔ Completar", self.alternar), ("✏ Editar", self.editar),
+        for texto, cmd in (("✔ Completar", self.alternar), (" Editar", self.editar),
                            ("🗑 Eliminar", self.eliminar),
                            ("Limpiar hechas", self.limpiar)):
             ttk.Button(botones, text=texto, command=cmd).pack(side="left", padx=(0, 6))
